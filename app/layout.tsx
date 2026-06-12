@@ -11,12 +11,17 @@ const inter = Inter({
 });
 
 const siteDescription =
-  "The definitive exposé of Pamela Price — recalled by 62.9% of Alameda County voters. Prosecutorial failures, victim betrayals, nepotism, Special Directive 23-01, and the 2026 comeback attempt.";
+  "63% of voters recalled her — now she's running again. 1,000+ cases dismissed, victims betrayed, FBI-linked boyfriend on payroll. Read the full dossier before history gets rewritten.";
+
+const shareTitle = "63% Recalled Her. She's Running Again. | The Pamela Price Files";
+
+const shareDescription =
+  "1,000+ cases expired. Murder plea deals shredded. An FBI-investigated boyfriend on the taxpayer dime. The opposition dossier every Alameda County voter needs before 2026.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "The Pamela Price Files | Alameda County's Recalled DA Exposed",
+    default: shareTitle,
     template: "%s | The Pamela Price Files",
   },
   description: siteDescription,
@@ -50,9 +55,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "THE PAMELA PRICE FILES",
-    description:
-      "62.9% of voters recalled her. She's running again. This dossier documents every failure, betrayal, and scandal that removed Alameda County's District Attorney.",
+    title: shareTitle,
+    description: shareDescription,
     type: "website",
     locale: "en_US",
     siteName: "The Pamela Price Files",
@@ -68,9 +72,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "THE PAMELA PRICE FILES",
-    description:
-      "The largest DA recall by volume in recent U.S. history. Every scandal. Every victim. Every fact.",
+    title: shareTitle,
+    description: shareDescription,
     images: ["/Pamela_Price.webp"],
   },
   robots: {
@@ -106,7 +109,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${SITE_URL}/#webpage`,
       url: SITE_URL,
-      name: "The Pamela Price Files | Alameda County's Recalled DA Exposed",
+      name: shareTitle,
       description: siteDescription,
       isPartOf: { "@id": `${SITE_URL}/#website` },
       about: {
@@ -131,7 +134,7 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: "The Pamela Price Files: Opposition Research on Alameda County's Recalled District Attorney",
+      headline: shareTitle,
       description: siteDescription,
       author: { "@id": `${SITE_URL}/#organization` },
       publisher: { "@id": `${SITE_URL}/#organization` },

@@ -280,8 +280,8 @@ function ShareButton({ className = "" }: { className?: string }) {
 
   const share = useCallback(async () => {
     const data = {
-      title: "The Pamela Price Files",
-      text: "62.9% of Alameda County voters recalled Pamela Price. Read the definitive exposé.",
+      title: "63% Recalled Her. She's Running Again.",
+      text: "1,000+ cases dismissed. Victims betrayed. The full Pamela Price dossier — read before 2026.",
       url: window.location.href,
     };
     if (navigator.share) {
@@ -297,7 +297,7 @@ function ShareButton({ className = "" }: { className?: string }) {
 
   const shareUrl = typeof window !== "undefined" ? window.location.href : "";
   const shareText =
-    "62.9% of Alameda County voters recalled Pamela Price. Read the definitive exposé.";
+    "63% recalled her. She's running again. 1,000+ cases dismissed, victims betrayed — read the full Pamela Price dossier:";
 
   return (
     <div className="relative inline-block">
