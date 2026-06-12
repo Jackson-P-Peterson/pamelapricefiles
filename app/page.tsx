@@ -332,6 +332,8 @@ function ShareButton({ className = "" }: { className?: string }) {
   );
 }
 
+const DONATE_URL = "https://opportunity.vote/donate";
+
 /* ─── Navbar ───────────────────────────────────────────────────────── */
 
 function Navbar({ activeId }: { activeId: string }) {
@@ -347,27 +349,43 @@ function Navbar({ activeId }: { activeId: string }) {
           Pamela Price <span className="text-crimson-bright">Files</span>
         </a>
 
-        <nav className="hidden items-center gap-6 md:flex">
-          {NAV_SECTIONS.slice(1, 6).map((s) => (
-            <a
-              key={s.id}
-              href={`#${s.id}`}
-              className={`text-xs font-semibold uppercase tracking-wider transition ${
-                activeId === s.id ? "text-crimson-bright" : "text-white/60 hover:text-white"
-              }`}
-            >
-              {s.label.replace(/^Part \d+:?\s*/, "").slice(0, 20)}
-            </a>
-          ))}
-        </nav>
+        <div className="hidden items-center gap-6 md:flex">
+          <nav className="flex items-center gap-6">
+            {NAV_SECTIONS.slice(1, 6).map((s) => (
+              <a
+                key={s.id}
+                href={`#${s.id}`}
+                className={`text-xs font-semibold uppercase tracking-wider transition ${
+                  activeId === s.id ? "text-crimson-bright" : "text-white/60 hover:text-white"
+                }`}
+              >
+                {s.label.replace(/^Part \d+:?\s*/, "").slice(0, 20)}
+              </a>
+            ))}
+          </nav>
+          <a
+            href={DONATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-crimson px-4 py-2 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-crimson-bright"
+          >
+            Donate
+          </a>
+        </div>
 
-        <button
-          className="md:hidden"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <a
+            href={DONATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-crimson px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-white"
+          >
+            Donate
+          </a>
+          <button onClick={() => setOpen(!open)} aria-label="Toggle menu">
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -1039,7 +1057,7 @@ export default function Home() {
         {/* ── FOOTER ─────────────────────────────────────────────── */}
         <footer className="border-t border-white/5 px-4 py-10 text-center">
           <a
-            href="https://opportunity.vote/donate"
+            href={DONATE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-crimson px-8 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-crimson-bright"
