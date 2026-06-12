@@ -280,8 +280,8 @@ function ShareButton({ className = "" }: { className?: string }) {
 
   const share = useCallback(async () => {
     const data = {
-      title: "63% Recalled Her. She's Running Again.",
-      text: "1,000+ cases dismissed. Victims betrayed. The full Pamela Price dossier — read before 2026.",
+      title: "The Pamela Price Files",
+      text: "The full opposition dossier on Alameda County's recalled DA — 1,000+ cases expired, victims betrayed, scandals documented.",
       url: window.location.href,
     };
     if (navigator.share) {
@@ -297,7 +297,7 @@ function ShareButton({ className = "" }: { className?: string }) {
 
   const shareUrl = typeof window !== "undefined" ? window.location.href : "";
   const shareText =
-    "63% recalled her. She's running again. 1,000+ cases dismissed, victims betrayed — read the full Pamela Price dossier:";
+    "The Pamela Price Files — the full opposition dossier on Alameda County's recalled DA. 1,000+ cases expired, victims betrayed, every scandal documented:";
 
   return (
     <div className="relative inline-block">
@@ -972,8 +972,7 @@ export default function Home() {
             <p className="mt-6 text-lg text-white/70">
               Recalled in November 2024. Running again by December 2025. Her strategy: nationalize
               the race — invoke Trump, ICE, Gaza, and billionaire bogeymen — anything to avoid her
-              local record. Voters aren&apos;t buying it. Unofficial 2026 primary results showed her
-              trailing at ~23% while the incumbent captured ~65%.
+              local record and the failures documented in this dossier.
             </p>
 
             <div className="mt-10">

@@ -10,18 +10,18 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteDescription =
-  "63% of voters recalled her — now she's running again. 1,000+ cases dismissed, victims betrayed, FBI-linked boyfriend on payroll. Read the full dossier before history gets rewritten.";
+const siteTitle = "The Pamela Price Files";
 
-const shareTitle = "63% Recalled Her. She's Running Again. | The Pamela Price Files";
+const siteDescription =
+  "The definitive exposé of Pamela Price — recalled by 62.9% of Alameda County voters. Prosecutorial failures, victims betrayed, nepotism, and the record she wants voters to forget.";
 
 const shareDescription =
-  "1,000+ cases expired. Murder plea deals shredded. An FBI-investigated boyfriend on the taxpayer dime. The opposition dossier every Alameda County voter needs before 2026.";
+  "1,000+ cases expired. Murder plea deals shredded. An FBI-investigated boyfriend on the taxpayer dime. The full opposition dossier on Alameda County's recalled District Attorney.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: shareTitle,
+    default: siteTitle,
     template: "%s | The Pamela Price Files",
   },
   description: siteDescription,
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: shareTitle,
+    title: siteTitle,
     description: shareDescription,
     type: "website",
     locale: "en_US",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: shareTitle,
+    title: siteTitle,
     description: shareDescription,
     images: ["/Pamela_Price.webp"],
   },
@@ -109,7 +109,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${SITE_URL}/#webpage`,
       url: SITE_URL,
-      name: shareTitle,
+      name: siteTitle,
       description: siteDescription,
       isPartOf: { "@id": `${SITE_URL}/#website` },
       about: {
@@ -134,7 +134,7 @@ const jsonLd = {
     },
     {
       "@type": "Article",
-      headline: shareTitle,
+      headline: siteTitle,
       description: siteDescription,
       author: { "@id": `${SITE_URL}/#organization` },
       publisher: { "@id": `${SITE_URL}/#organization` },
